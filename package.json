@@ -23,7 +23,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
