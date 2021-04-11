@@ -67,3 +67,44 @@
   margin-right: 10px;
   color: white;
 }
+.menu {
+  display: none;
+}
+/*media queries */
+@media only screen and (max-width: 530px) {
+  .header {
+    min-width: 100vw;
+    margin: 0px;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #131921;
+    transition-duration: 0.3s;
+  }
+  .menu {
+    display: unset;
+    color: aliceblue;
+    font-size: 13px;
+    font-weight: 800;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+  }
+  .showmenu {
+    width: 66%;
+  }
+  .header__optionLineOne {
+    margin-top: 20px;
+  }
+  .header__optionBasket {
+    margin-top: 5px;
+    margin-left: 6px;
+  }
+}

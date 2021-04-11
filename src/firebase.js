@@ -1,19 +1,18 @@
-import firebase from 'firebase'
+import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCoTYpoQkmnxY8dAPtF03f04a2in0H_tXg',
-  authDomain: 'feed-97658.firebaseapp.com',
-  databaseURL: 'https://feed-97658-default-rtdb.firebaseio.com',
-  projectId: 'feed-97658',
-  storageBucket: 'feed-97658.appspot.com',
-  messagingSenderId: '696896135316',
-  appId: '1:696896135316:web:a3aa5acc9e0eaa8bbc5481',
-  measurementId: 'G-SGRKMFXGYY',
-}
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MEASUREMENTID,
+};
 
-const firebaseApp = firebase.initializeApp(firebaseConfig)
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
 
-const db = firebaseApp.firestore()
-const auth = firebase.auth()
-
-export { db, auth }
+export { db, auth };
